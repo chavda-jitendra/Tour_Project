@@ -26,12 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6($6+z*#)+d2o!3=3%@=qdhx5i85r%%z%w$e8#bna4s6#9(^s@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['Tour_travel.onrender.com',' http://127.0.0.1:8000/']
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = ['tour-project-ejil.onrender.com']
 
 # ALLOWED_HOSTS = ['']
 
