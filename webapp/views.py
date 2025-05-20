@@ -114,36 +114,7 @@ def dashboard(request):
         users = None  # Non-superusers won't see any data
         return render(request, 'templates/index.html', {'users': users})
 
-# def signin(request):
-#     if request.method == 'POST':
-#         # Get form data from the request
-#         username = request.POST.get('name')
-#         email = request.POST.get('email')
-#         password = request.POST.get('password')
-#         number = request.POST.get('number')
-#         confirm_password = request.POST.get('cpassword')
-        
-#         # Validate the form data
-#         if password != confirm_password:
-#             messages.error(request, "Passwords do not match.")
-#             return redirect('signin')
-        
-#         try:
-#             # Create a new user
-#             user = User.objects.create_user(username=username, email=email, password=password)
-#             user.save()
-#             messages.success(request, "Account created successfully!")
-            
-#         except IntegrityError:
-#             messages.error(request, "Username already exists. Please choose another one.")
-#             return redirect('signin')
-        
-#         else:
-#             # If authentication fails, send an error message
-#             messages.error(request, "fill up the field")
-#             return redirect('signin')
 
-#     return render(request, 'templates/signin.html')
 def signin(request):
     if request.method == 'POST':
         username = request.POST.get('name')
